@@ -1,0 +1,10 @@
+<h1><%= @recipe.name %></h1>
+
+<% @recipe_ingredients.each do |ingredient| %>
+  <%= ingredient %>
+<% end %>
+
+
+<%= form_with model: @recipe_ingredient do |form| %>
+  <%= form.text_field :name, list:"names"%>
+<% end %>
